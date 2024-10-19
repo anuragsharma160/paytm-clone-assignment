@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayTm-Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "480px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+          },
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              skyblue: "#00BAF2",
+              darkblue: "#0F4A8A",
+              rcardhoverblackskyblue: "#08a0cf",
+              bcardhoverdarkblue: "#043b78",
+              dullwhite: "#e8e8e8",
+              finsecbg: "#F5F7FA",
+              cardskybluelightskyblue: "#66D6FF",
+              btndarkblue: "#002970",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header
+      class="text-gray-600 body-font fixed inset-0 z-[1000] bg-white h-fit xl:w-full"
+    >
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col items-start md:flex-row md:items-center max-w-[1180px]"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer"
+        >
+          <img src="paytm-assets/logo.svg" alt="" />
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto hidden md:flex flex-wrap items-center text-base justify-center"
+        >
+          <a
+            class="mr-5 hover:text-gray-900 font-bold cursor-pointer text-[1.1rem]"
+            >Paytm for Consumer</a
+          >
+          <a
+            class="mr-5 hover:text-gray-900 font-bold cursor-pointer text-[1.1rem]"
+            >Paytm for Business</a
+          >
+          <a
+            class="mr-5 hover:text-gray-900 font-bold cursor-pointer text-[1.1rem]"
+            >Investor Relations</a
+          >
+          <a
+            class="mr-5 hover:text-gray-900 font-bold cursor-pointer text-[1.1rem]"
+            >Company</a
+          >
+          <a
+            class="mr-5 hover:text-gray-900 font-bold cursor-pointer text-[1.1rem]"
+            >Career</a
+          >
+        </nav>
+        <button
+          class="inline-flex items-center bg-skyblue border-0 py-2 px-6 focus:outline-none hover:bg-darkblue rounded-full text-base mt-4 md:mt-0 text-white relative group"
+        >
+          <p class="mr-6 font-semibold">Sign In</p>
+          <img
+            src="paytm-assets/loginImg.svg"
+            alt=""
+            class="ml-4 rounded-full absolute right-1 z-20 group-hover:hidden"
+          />
+          <img
+            src="paytm-assets/logoutImg.svg"
+            alt=""
+            class="ml-4 rounded-full absolute right-1 group-hover:block z-10 group-hover:z-10"
+          />
+        </button>
+      </div>
+    </header>
+
+    <!-- Recharge & Pay Bills On Paytm -->
+    <section class="bg-skyblue pt-20 pb-20 mt-32">
+      <div class="max-w-[1280px] mx-auto">
+        <h1 class="text-white text-4xl font-bold">
+          Recharge & Pay Bills on Paytm.
+        </h1>
+        <!-- Cards -->
+        <div
+          class="md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-7 gap-3 flex flex-col items-center mt-10 pt-5 pb-5"
+        >
+          <!-- Card-1 -->
+          <a
+            href=""
+            class="w-36 h-fit rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/Recharge-mobile.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-semibold text-[17px]">
+                Recharge Prepaid Mobile
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-2 -->
+          <a
+            href=""
+            class="w-36 h-fit rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/Pay-Electricity.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-semibold text-[17px]">
+                Pay <br />
+                Electricity <br />
+                Bill
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-3 -->
+          <a
+            href=""
+            class="h-fit w-36 rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/Pay-DTH.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-semibold text-[17px] w-[7rem]">
+                Recharge <br />
+                DTH Connection
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-4 -->
+          <a
+            href=""
+            class="w-36 h-fit rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/Book-LPG.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-semibold text-[17px]">
+                Book <br />
+                Gas <br />
+                Cylinder
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-5 -->
+          <a
+            href=""
+            class="w-36 h-fit rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/Pay-Broadband.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-semibold text-[17px] w-[7rem]">
+                Pay Broadband & Landline Bill
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-6 -->
+          <a
+            href=""
+            class="w-36 h-fit rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/Pay-Education.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-semibold text-[17px]">
+                Pay Education Fee
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-7 -->
+          <a
+            href=""
+            class="w-36 h-fit rounded-xl hover:bg-rcardhoverblackskyblue"
+          >
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img
+                src="paytm-assets/All-Payment-Services.png"
+                alt=""
+                width="60px"
+              />
+              <h4 class="text-white mt-4 font-semibold text-[17px]">
+                All <br />
+                Payment Services
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- India's most loved payments app -->
+    <section class="relative mt-32 w-full">
+      <div
+        class="flex flex-col items-start md:flex md:flex-row md:justify-between md:pl-32 md:space-y-0 space-y-8"
+      >
+        <!-- Left Part -->
+        <div class="flex flex-col relative">
+          <img
+            src="paytm-assets/India's-most-loved-pay-app.avif"
+            alt=""
+            width="80rem"
+            class="relative -top-4"
+          />
+          <h1
+            class="font-inter font-bold max-w-[600px] text-3xl md:text-3xl lg:text-6xl mt-12"
+          >
+            India's Most-loved Payments App
+          </h1>
+          <p class="font-inter text-xl max-w-[600px] font-medium mt-4">
+            Recharge & pay bills, book flights & movie tickets, invest in stocks
+            & mutual funds, and do a lot <br />
+            more.
+          </p>
+          <button
+            class="flex items-center justify-between border border-black rounded-full py-2 px-4 w-[16rem] bg-black hover:bg-white text-white group relative mt-7"
+          >
+            <p class="text-white font-medium group-hover:text-black">
+              Download Paytm App
+            </p>
+            <!-- Apple White -->
+            <svg
+              fill="#ffffff"
+              height="20px"
+              width="20px"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 22.773 22.773"
+              xml:space="preserve"
+              stroke="#ffffff"
+              class="absolute right-12 z-20 group-hover:hidden"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <path
+                      d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"
+                    ></path>
+                    <path
+                      d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <!-- Apple Black -->
+            <svg
+              fill="#000000"
+              height="20px"
+              width="20px"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 22.773 22.773"
+              xml:space="preserve"
+              stroke="#000000"
+              class="absolute right-12"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <path
+                      d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"
+                    ></path>
+                    <path
+                      d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <!-- Google White -->
+            <svg
+              fill="#ffffff"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20px"
+              height="20px"
+              class="absolute right-4 z-20 group-hover:hidden"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>ionicons-v5_logos</title>
+                <path
+                  d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"
+                ></path>
+                <path
+                  d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"
+                ></path>
+                <path
+                  d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"
+                ></path>
+                <path
+                  d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Google Black -->
+            <svg
+              fill="#000000"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20px"
+              height="20px"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>ionicons-v5_logos</title>
+                <path
+                  d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"
+                ></path>
+                <path
+                  d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"
+                ></path>
+                <path
+                  d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"
+                ></path>
+                <path
+                  d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <!-- Right Part -->
+        <div>
+          <img
+            src="paytm-assets/India's-most-loved-2nd.avif"
+            alt=""
+            width="500rem"
+            height=""
+            class="h-[100%]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Book & Buy On Paytm -->
+    <section class="bg-darkblue pt-20 pb-20 mt-16">
+      <div class="max-w-[1280px] mx-auto">
+        <h1 class="text-white text-4xl font-bold">Book & Buy on Paytm.</h1>
+        <!-- Cards -->
+        <div
+          class="grid grid-cols-1 place-items-center md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-7 gap-3 mt-10 pt-5 pb-5"
+        >
+          <!-- Card-1 -->
+          <a href="" class="w-36 h-fit rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/movie-tickets.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-bold text-[17px]">
+                Movie Tickets
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-2 -->
+          <a href="" class="w-36 h-fit rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/flight-tickets.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-bold text-[17px]">
+                Flight Tickets
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-3 -->
+          <a href="" class="h-fit w-36 rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/bus-tickets.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-bold text-[17px]">
+                Bus <br />
+                Tickets
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-4 -->
+          <a href="" class="w-36 h-fit rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/train-tickets.avif" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-bold text-[17px]">
+                Train Tickets
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-5 -->
+          <a href="" class="w-36 h-fit rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img
+                src="paytm-assets/international-flights.png"
+                alt=""
+                width="60px"
+              />
+              <h4 class="text-white mt-4 font-bold text-[17px] w-[7rem]">
+                International Flights
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-6 -->
+          <a href="" class="w-36 h-fit rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/buy-insurance.png" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-bold text-[17px] w-[7rem]">
+                Buy <br />
+                Insurance
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+          <!-- Card-7 -->
+          <a href="" class="w-36 h-fit rounded-xl hover:bg-bcardhoverdarkblue">
+            <div class="pl-3 pt-4 pb-4 pr-10">
+              <img src="paytm-assets/stocks.webp" alt="" width="60px" />
+              <h4 class="text-white mt-4 font-bold text-[17px]">
+                Invest <br />
+                in Stocks
+                <svg
+                  fill="#ffffff"
+                  height="12px"
+                  width="12px"
+                  class="inline"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 330 330"
+                  xml:space="preserve"
+                  stroke="#ffffff"
+                  stroke-width="16.5"
+                  transform="matrix(1, 0, 0, 1, 0, 0)"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="XMLID_222_"
+                      d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                    ></path>
+                  </g>
+                </svg>
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paytm Payments Instruments -->
+    <section class="bg-dullwhite pt-1 pb-32">
+      <div class="max-w-[1180px] mx-auto">
+        <h1
+          class="max-w-[1180px] mx-auto text-5xl font-inter font-bold mt-32 mb-8"
+        >
+          Paytm Payment Instruments
+        </h1>
+        <div
+          class="bg-finsecbg flex flex-col md:flex md:flex-row justify-between md:pl-28 md:pr-12 md:py-20 rounded-lg md:space-y-0 space-y-10"
+        >
+          <!-- Left Part -->
+          <div
+            class="flex flex-col justify-between max-w-[420px] md:space-y-0 space-y-8"
+          >
+            <div class="flex items-center space-x-4">
+              <img
+                src="paytm-assets/pay-instruments-1.png"
+                alt=""
+                class="bg-dullwhite"
+                width="80px"
+              />
+              <p class="font-bold">
+                UPI Money <br />
+                Transfer
+              </p>
+            </div>
+            <h1 class="text-4xl font-inter font-bold mt-10">
+              Pay anyone directly <br />
+              from your bank <br />
+              account.
+            </h1>
+            <p class="text-[17px] font-inter mt-3">
+              Pay anyone, everywhere. Make contactless & secure payments
+              in-stores or online using Paytm UPI or Directly from your Bank
+              Account. Plus, send & receive money from anyone.
+            </p>
+            <button
+              class="flex items-center justify-between rounded-full py-2 px-4 w-[14.5rem] bg-black hover:bg-white text-white group relative"
+            >
+              <p class="text-white font-medium group-hover:text-black">
+                Download the App
+              </p>
+              <!-- Apple White -->
+              <svg
+                fill="#ffffff"
+                height="20px"
+                width="20px"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 22.773 22.773"
+                xml:space="preserve"
+                stroke="#ffffff"
+                class="absolute right-12 z-20 group-hover:hidden"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path
+                        d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"
+                      ></path>
+                      <path
+                        d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <!-- Apple Black -->
+              <svg
+                fill="#000000"
+                height="20px"
+                width="20px"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 22.773 22.773"
+                xml:space="preserve"
+                stroke="#000000"
+                class="absolute right-12"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path
+                        d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"
+                      ></path>
+                      <path
+                        d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <!-- Google White -->
+              <svg
+                fill="#ffffff"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                class="absolute right-4 z-20 group-hover:hidden"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>ionicons-v5_logos</title>
+                  <path
+                    d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"
+                  ></path>
+                  <path
+                    d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"
+                  ></path>
+                  <path
+                    d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"
+                  ></path>
+                  <path
+                    d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"
+                  ></path>
+                </g>
+              </svg>
+              <!-- Google Black -->
+              <svg
+                fill="#000000"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>ionicons-v5_logos</title>
+                  <path
+                    d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"
+                  ></path>
+                  <path
+                    d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"
+                  ></path>
+                  <path
+                    d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"
+                  ></path>
+                  <path
+                    d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <!-- Right Part -->
+          <div>
+            <img src="paytm-assets/pay-instruments-2.webp" alt="" />
+          </div>
+        </div>
+        <div
+          class="mt-8 flex flex-col md:flex md:flex-row justify-between gap-10"
+        >
+          <!-- Left Part -->
+          <a href="">
+            <div class="bg-finsecbg rounded-xl pt-[67px] px-16">
+              <div class="w-48">
+                <img
+                  src="paytm-assets/paytm-hdfc.png"
+                  alt=""
+                  class="h-[100%] w-[100%]"
+                />
+              </div>
+              <h1 class="font-inter font-bold text-4xl my-7">
+                Unlimited Cashback Every time
+              </h1>
+              <h4 class="font-inter font-medium text-xl">
+                Paytm HDFC Bank Select Credit Card. A card with assured Cashback
+                and incredible offers.
+              </h4>
+              <p class="font-inter text-sm my-2 max-w-[24rem]">
+                *Paytm Payments Bank does not provide any loan or credit card on
+                the Paytm App.
+                <span class="font-inter font-semibold text-skyblue"
+                  >Know more</span
+                >
+              </p>
+              <img src="paytm-assets/paytm-hdfc-card.webp" alt="" />
+            </div>
+          </a>
+          <!-- Right Part -->
+          <a href="">
+            <div class="bg-finsecbg rounded-xl pt-32 px-16">
+              <div class="w-48">
+                <img
+                  src="paytm-assets/paytm-sbi.png"
+                  alt=""
+                  class="h-[100%] w-[100%]"
+                />
+              </div>
+              <h1 class="font-inter font-bold text-4xl my-7">
+                India’s Most Sincere Credit Card
+              </h1>
+              <h4 class="font-inter font-medium text-xl">
+                Paytm SBI Card SELECT - With Intelligent Features & Great
+                Rewards that Never Expire
+              </h4>
+              <p class="font-inter text-sm my-2 max-w-[24rem]">
+                *Paytm Payments Bank does not provide any loan or credit card on
+                the Paytm App.
+                <span class="font-inter font-semibold text-skyblue"
+                  >Know more</span
+                >
+              </p>
+              <img src="paytm-assets/paytm-sbi-card.webp" alt="" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insurance made easy -->
+    <section>
+      <div
+        class="max-w-[1180px] flex flex-col md:flex md:flex-row justify-between mx-auto pt-24 pb-32"
+      >
+        <!-- Left Part -->
+        <div>
+          <img
+            src="paytm-assets/insurance-brooking.webp"
+            width="180px"
+            alt=""
+            class="mt-5"
+          />
+          <h1 class="font-inter font-bold mt-16 text-4xl">
+            Insurance made easy.
+          </h1>
+          <p class="font-inter font-medium text-xl my-10 max-w-[490px]">
+            Buying insurance does not have to be tedious, time-consuming &
+            confusing. Paytm Insurance removes the worry of getting insured by
+            making it simple, convenient & easy-to-understand.
+          </p>
+          <button
+            class="font-inter font-bold flex flex-row justify-around items-center bg-btndarkblue text-white rounded-full py-3 px-4 w-[10rem] hover:bg-skyblue group relative my-6"
+          >
+            Learn More
+            <svg
+              fill="#ffffff"
+              height="12px"
+              width="12px"
+              height="12px"
+              class="inline"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 330 330"
+              xml:space="preserve"
+              stroke="#ffffff"
+              stroke-width="16.5"
+              transform="matrix(1, 0, 0, 1, 0, 0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  id="XMLID_222_"
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Long Arrow -->
+            <!-- <svg
+            fill="#ffffff"
+            height="20px"
+            width="12px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+            stroke="#ffffff"
+            class="hidden group-hover:block border-2 border-yellow-300"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                id="XMLID_27_"
+                d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+              ></path>
+            </g>
+          </svg> -->
+          </button>
+        </div>
+        <!-- Right Part -->
+        <div>
+          <img
+            src="paytm-assets/insurance-brooking-2nd.webp"
+            alt=""
+            width="490rem"
+            class="h-[100%]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Build Long Term -->
+    <section
+      class="bg-[url(paytm-assets/gray-spike.avif)] bg-no-repeat bg-cover pb-20 bg-finsecbg pt-16 md:pt-7"
+    >
+      <div
+        class="max-w-[1180px] flex flex-col md:flex md:flex-row justify-between items-center mx-auto"
+      >
+        <!-- Left Part -->
+        <div>
+          <img
+            src="paytm-assets/build-long-1st.webp"
+            alt=""
+            width="500rem"
+            class="h-[100%]"
+          />
+        </div>
+        <!-- Right Part -->
+        <div>
+          <img
+            src="paytm-assets/paytm-money.webp"
+            width="180px"
+            alt=""
+            class="mt-5"
+          />
+          <h1 class="font-inter font-bold mt-16 text-4xl max-w-[350px]">
+            Build Long-term Wealth & Achieve your Goals.
+          </h1>
+          <p class="font-inter font-medium text-xl my-10 max-w-[490px]">
+            Investing on Paytm Money is transparent, low-cost and
+            commission-free. Buy stocks & mutual funds that can help you create
+            wealth & realise your dreams.
+          </p>
+          <button
+            class="font-inter font-bold flex flex-row justify-around items-center bg-btndarkblue text-white rounded-full py-3 px-4 w-[10rem] hover:bg-skyblue group relative my-6"
+          >
+            Learn More
+            <svg
+              fill="#ffffff"
+              height="12px"
+              width="12px"
+              height="12px"
+              class="inline"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 330 330"
+              xml:space="preserve"
+              stroke="#ffffff"
+              stroke-width="16.5"
+              transform="matrix(1, 0, 0, 1, 0, 0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  id="XMLID_222_"
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Long Arrow -->
+            <!-- <svg
+            fill="#ffffff"
+            height="20px"
+            width="12px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+            stroke="#ffffff"
+            class="hidden group-hover:block border-2 border-yellow-300"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                id="XMLID_27_"
+                d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+              ></path>
+            </g>
+          </svg> -->
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial Services by Paytm -->
+    <section class="mt-32">
+      <h1
+        class="max-w-[1180px] flex flex-row mx-auto text-5xl font-bold font-inter"
+      >
+        Financial Services by Paytm
+      </h1>
+      <div
+        class="max-w-[1180px] flex flex-col md:flex md:flex-row mx-auto justify-between items-center"
+      >
+        <!-- Left Part -->
+        <div>
+          <img
+            src="paytm-assets/Financial-Services-1.png"
+            width="200px"
+            alt=""
+            class="mt-5"
+          />
+          <h1 class="font-inter font-bold mt-16 text-4xl max-w-[430px]">
+            Get a Personal Loan in 2 Minutes.
+          </h1>
+          <p class="font-inter font-medium text-xl my-10 max-w-[480px]">
+            Paytm offers India’s quickest multi-purpose, hassle-free loan. It is
+            100% digital, transparent and paperless.
+          </p>
+          <button
+            class="font-inter font-bold flex flex-row justify-around items-center bg-btndarkblue text-white rounded-full py-3 px-4 w-[10rem] hover:bg-skyblue group relative my-6"
+          >
+            Learn More
+            <svg
+              fill="#ffffff"
+              height="12px"
+              width="12px"
+              height="12px"
+              class="inline"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 330 330"
+              xml:space="preserve"
+              stroke="#ffffff"
+              stroke-width="16.5"
+              transform="matrix(1, 0, 0, 1, 0, 0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  id="XMLID_222_"
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Long Arrow -->
+            <!-- <svg
+            fill="#ffffff"
+            height="20px"
+            width="12px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330"
+            xml:space="preserve"
+            stroke="#ffffff"
+            class="hidden group-hover:block border-2 border-yellow-300"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                id="XMLID_27_"
+                d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+              ></path>
+            </g>
+          </svg> -->
+          </button>
+        </div>
+        <!-- Right Part -->
+        <div>
+          <img
+            src="paytm-assets/Financial-Services-2.avif"
+            alt=""
+            width="470rem"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Services by Paytm -->
+    <section class="mt-64">
+      <h1 class="max-w-[1180px] mx-auto text-5xl font-bold">
+        Business Services by Paytm
+      </h1>
+      <div
+        class="max-w-[1180px] flex flex-col md:flex md:flex-row justify-between items-center mx-auto bg-dullwhite pt-20 pb-20 md:pl-28 mt-10 rounded-lg"
+      >
+        <!-- Left Part -->
+        <div>
+          <h1 class="font-inter font-bold mt-16 text-4xl max-w-[350px]">
+            Accept payments online with ease
+          </h1>
+          <p class="font-inter font-medium text-xl my-10 max-w-[490px]">
+            Grow your business with the payment gateway that powers India’s
+            largest brands and even the Paytm App
+          </p>
+          <button
+            class="font-inter font-bold flex flex-row justify-around items-center bg-btndarkblue text-white rounded-full py-3 px-4 w-[10rem] hover:bg-skyblue group relative my-6"
+          >
+            Learn More
+            <svg
+              fill="#ffffff"
+              height="12px"
+              width="12px"
+              height="12px"
+              class="inline"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 330 330"
+              xml:space="preserve"
+              stroke="#ffffff"
+              stroke-width="16.5"
+              transform="matrix(1, 0, 0, 1, 0, 0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  id="XMLID_222_"
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Long Arrow -->
+            <!-- <svg
+          fill="#ffffff"
+          height="20px"
+          width="12px"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 330 330"
+          xml:space="preserve"
+          stroke="#ffffff"
+          class="hidden group-hover:block border-2 border-yellow-300"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              id="XMLID_27_"
+              d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+            ></path>
+          </g>
+        </svg> -->
+          </button>
+        </div>
+        <!-- Right Part -->
+        <div>
+          <img
+            src="paytm-assets/Business-Services.avif"
+            alt=""
+            width="460rem"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- In Shop Payments by paytm -->
+    <section class="mt-10">
+      <div
+        class="max-w-[1180px] flex flex-col md:flex md:flex-row justify-between items-center mx-auto bg-dullwhite pt-20 pb-20 md:pl-28 mt-10 rounded-lg"
+      >
+        <!-- Left Part -->
+        <div>
+          <h1 class="font-inter font-bold mt-16 text-4xl max-w-[350px]">
+            In-shop payments powered by Paytm.
+          </h1>
+          <p class="font-inter font-medium text-xl my-10 max-w-[490px]">
+            Millions of small & big businesses use Paytm to accept payments
+            anywhere any time with a wide range of solutions for all kind of
+            merchants
+          </p>
+          <button
+            class="font-inter font-bold flex flex-row justify-around items-center bg-btndarkblue text-white rounded-full py-3 px-4 w-[10rem] hover:bg-skyblue group relative my-6"
+          >
+            Learn More
+            <svg
+              fill="#ffffff"
+              height="12px"
+              width="12px"
+              height="12px"
+              class="inline"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 330 330"
+              xml:space="preserve"
+              stroke="#ffffff"
+              stroke-width="16.5"
+              transform="matrix(1, 0, 0, 1, 0, 0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  id="XMLID_222_"
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Long Arrow -->
+            <!-- <svg
+          fill="#ffffff"
+          height="20px"
+          width="12px"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 330 330"
+          xml:space="preserve"
+          stroke="#ffffff"
+          class="hidden group-hover:block border-2 border-yellow-300"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              id="XMLID_27_"
+              d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+            ></path>
+          </g>
+        </svg> -->
+          </button>
+        </div>
+        <!-- Right Part -->
+        <div>
+          <img src="paytm-assets/In-shop-payments.avif" alt="" width="460rem" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Tools to help your business grow -->
+    <section class="mt-44">
+      <div class="max-w-[1180px] mx-auto">
+        <h1 class="text-4xl font-bold font-inter max-w-[480px]">
+          Business Tools to help your business grow
+        </h1>
+        <div class="grid grid-cols-1 md:grid md:grid-cols-4 gap-10 mt-20">
+          <!-- Card-1 -->
+          <div>
+            <img src="paytm-assets/POS.webp" alt="" />
+            <h2 class="font-inter font-bold text-2xl max-w-[150px] my-10">
+              POS Billing Software
+            </h2>
+            <p class="font-inter font-medium max-w-[200px]">
+              Say Hello to Smart Retail Business Management
+            </p>
+            <a
+              href=""
+              class="font-inter font-bold mt-4 flex flex-row items-center"
+              >Learn More
+              <svg
+                fill="#000000"
+                height="20px"
+                width="18px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+                class="inline"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    id="XMLID_27_"
+                    d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <!-- Card-2 -->
+          <div>
+            <img src="paytm-assets/Paytm-For-Business-App.webp" alt="" />
+            <h2 class="font-inter font-bold text-2xl max-w-[180px] my-10">
+              Paytm for Business App
+            </h2>
+            <p class="font-inter font-medium max-w-[200px]">
+              Everything you need to manage your business on your phone
+            </p>
+            <a
+              href=""
+              class="font-inter font-bold mt-4 flex flex-row items-center"
+              >Learn More
+              <svg
+                fill="#000000"
+                height="20px"
+                width="18px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+                class="inline"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    id="XMLID_27_"
+                    d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <!-- Card-3 -->
+          <div>
+            <img src="paytm-assets/Advertise-on-paytm.webp" alt="" />
+            <h2 class="font-inter font-bold text-2xl max-w-[150px] my-10">
+              Advertise on Paytm
+            </h2>
+            <p class="font-inter font-medium max-w-[200px]">
+              Grow your business by advertising on India’s largest mobile
+              business
+            </p>
+            <a
+              href=""
+              class="font-inter font-bold mt-4 flex flex-row items-center"
+              >Learn More
+              <svg
+                fill="#000000"
+                height="20px"
+                width="18px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+                class="inline"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    id="XMLID_27_"
+                    d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <!-- Card-4 -->
+          <div>
+            <img src="paytm-assets/Business-Khata.webp" alt="" />
+            <h2 class="font-inter font-bold text-2xl max-w-[150px] my-10">
+              Business Khata
+            </h2>
+            <p class="font-inter font-medium max-w-[200px]">
+              Managing Khata made easy
+            </p>
+            <a
+              href=""
+              class="font-inter font-bold mt-4 flex flex-row items-center"
+              >Learn More
+              <svg
+                fill="#000000"
+                height="20px"
+                width="18px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 330 330"
+                xml:space="preserve"
+                class="inline"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    id="XMLID_27_"
+                    d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paytm Money -->
+    <section class="mt-80">
+      <div class="max-w-[1180px] mx-auto">
+        <div class="lex flex-col md:flex md:flex-row gap-10">
+          <!-- Left Part -->
+          <div>
+            <div class="max-w-[350px]">
+              <img src="paytm-assets/paytm-money.webp" alt="" />
+              <p class="mt-14 font-inter font-medium">
+                Get started on wealth creation journey with Zero brokerage fee &
+                no hidden charges.
+              </p>
+              <a
+                href=""
+                class="inline-block mt-3 text-skyblue font-semibold font-inter"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <!-- Right Part -->
+          <div class="grid grid-cols-2 md:grid md:grid-cols-5 gap-10">
+            <!-- Card-1 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 h-full">
+                <div>
+                  <img src="paytm-assets/Invest-in -stocks.webp" alt="" />
+                </div>
+                <h4
+                  class="font-inter text-white font-bold text-xl text-center my-4"
+                >
+                  Invest in Stocks
+                </h4>
+              </div>
+            </a>
+            <!-- Card-2 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 h-full">
+                <img src="paytm-assets/Apply-IPO.webp" alt="" />
+                <h4
+                  class="font-inter text-white font-bold text-xl text-center my-4"
+                >
+                  Apply for IPO
+                </h4>
+              </div>
+            </a>
+            <!-- Card-3 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 h-full">
+                <img src="paytm-assets/Invest-ETF.webp" alt="" />
+                <h4
+                  class="font-inter text-white font-bold text-xl text-center my-4"
+                >
+                  Invest in <br />
+                  ETFs
+                </h4>
+              </div>
+            </a>
+            <!-- Card-4 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 h-full">
+                <img src="paytm-assets/Build-gold.webp" alt="" />
+                <h4
+                  class="font-inter text-white font-bold text-xl text-center my-4"
+                >
+                  Buy Gold
+                </h4>
+              </div>
+            </a>
+            <!-- Card-5 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 h-full">
+                <img src="paytm-assets/Invest-Mutual-Funds.webp" alt="" />
+                <h4
+                  class="font-inter text-white font-bold text-xl text-center my-4"
+                >
+                  Invest in <br />
+                  Mutual Funds
+                </h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paytm Travel -->
+    <section class="mt-36">
+      <div class="max-w-[1180px] mx-auto">
+        <div class="flex flex-col md:flex md:flex-row gap-10">
+          <!-- Left Part -->
+          <div>
+            <div class="max-w-[200px]">
+              <img src="paytm-assets/paytm-travel.webp" alt="" />
+              <p class="mt-14 font-inter font-medium">
+                Best travel solutions with quick ticket bookings, great offers
+                and easy refunds
+              </p>
+              <a
+                href=""
+                class="inline-block mt-3 text-skyblue font-semibold font-inter"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <!-- Right Part -->
+          <div class="grid grid-cols-2 md:grid md:grid-cols-4 gap-10">
+            <!-- Card-1 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 max-w-[165px] h-full">
+                <div class="my-5">
+                  <img
+                    src="paytm-assets/refund-hundred-percent.webp"
+                    alt=""
+                    width="70px"
+                  />
+                </div>
+                <h4 class="font-inter text-white text-sm font-bold my-4">
+                  <span class="font-inter text-white font-bold text-[18px]"
+                    >100% refund</span
+                  >
+                  <br />
+                  with Paytm's Cancellation Protect
+                </h4>
+              </div>
+            </a>
+            <!-- Card-2 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 max-w-[165px] h-full">
+                <div class="my-5">
+                  <img
+                    src="paytm-assets/sanitised-bus.webp"
+                    alt=""
+                    width="70px"
+                  />
+                </div>
+                <h4 class="font-inter text-white font-bold text-[18px] my-4">
+                  Sanitized Bus Options With TravelSafe+
+                </h4>
+              </div>
+            </a>
+            <!-- Card-3 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 max-w-[165px] h-full">
+                <div class="my-5">
+                  <img
+                    src="paytm-assets/hassle-free-train.avif"
+                    alt=""
+                    width="70px"
+                  />
+                </div>
+                <h4
+                  class="font-inter text-white font-bold text-[18px] my-4 max-w-[130px]"
+                >
+                  Hassle Free Train Ticket Bookings
+                </h4>
+              </div>
+            </a>
+            <!-- Card-4 -->
+            <a
+              href=""
+              class="rounded-xl bg-cardskybluelightskyblue hover:bg-skyblue"
+            >
+              <div class="pt-1 pl-1 pr-1 max-w-[165px] h-full">
+                <div class="my-5">
+                  <img src="paytm-assets/PNR-Status.webp" alt="" width="70px" />
+                </div>
+                <h4 class="font-inter text-white font-bold text-[18px] my-4">
+                  PNR Status Check In Few Simple Clicks
+                </h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="bg-dullwhite mt-44 py-20">
+      <div
+        class="md:max-w-[1240px] mx-auto flex flex-col md:flex md:flex-row justify-between items-center space-y-4"
+      >
+        <!-- Left Part -->
+        <div
+          class="flex flex-col space-y-4 md:flex md:flex-row justify-between items-center space-x-4 md:space-y-0"
+        >
+          <h3 class="text-xl font-inter font-bold max-w-[230px]">
+            Download Paytm App to Pay from anywhere
+          </h3>
+          <a href="">
+            <img src="paytm-assets/downloadApple.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="paytm-assets/downloadGooglePlay.svg" alt="" />
+          </a>
+        </div>
+        <!-- Right Part -->
+        <div class="flex flex-row space-x-5">
+          <a href="">
+            <img src="paytm-assets/twitter.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="paytm-assets/instagram.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="paytm-assets/facebook.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div>
+        <hr class="h-0.5 bg-gray-500 my-20 block max-w-[1240px] mx-auto" />
+      </div>
+    </section>
+    <hr class="bg-skyblue h-2" />
+  </body>
+</html>
